@@ -22,7 +22,7 @@ class SynchronousTestingSpec extends WordSpecLike with BeforeAndAfterAll{
       counter ! Inc
 
       assert(counter.underlyingActor.count == 1)
-    }  xz
+    }
 
     "synchronously increase its counter at the call of the receive function" in {
       val counter = TestActorRef[Counter](Props[Counter])
